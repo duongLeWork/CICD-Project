@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -12,3 +13,6 @@ async def root():
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
+@app.get("/alo/{name")
+async def say_alo(name: str):
+    return {"message": f"Hello {name}"}
